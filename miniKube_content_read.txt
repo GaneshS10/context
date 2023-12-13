@@ -1,0 +1,45 @@
+Install Minikube:
+
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+chmod +x minikube
+sudo mv minikube /usr/local/bin/
+
+Explanation:
+
+curl:
+
+curl is a command-line tool used for making HTTP requests. In this context, it is being used to download a file.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-Lo:
+
+These are options/flags for the curl command.
+-L: Follow redirects. If the requested page has moved to a different location, curl will automatically follow the redirect.
+-o: Specify the output file name. In this case, it is followed by minikube, which means the downloaded file will be saved as minikube.
+minikube:
+
+This is the name given to the output file. It's the name that will be used when the file is saved on your system.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64:
+
+This is the URL from which curl will download the file. It's the latest version of Minikube for Linux with AMD64 architecture. Minikube is a tool that sets up a single-node Kubernetes cluster on your local machine.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+chmod +x minikube:
+
+chmod is a command used to change the permissions of a file.
++x: Adds execute permission to the file.
+minikube: The name of the file for which execute permission is being added.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+sudo mv minikube /usr/local/bin:
+
+sudo: This is a command that allows a permitted user to execute a command as the superuser or another user, as specified by the security policy.
+mv: Stands for "move". This command is used to move or rename files/directories.
+minikube: The file or directory being moved.
+/usr/local/bin: This is the destination directory. /usr/local/bin is a common location for storing executable files in Linux.
+

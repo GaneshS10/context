@@ -1,0 +1,28 @@
+
+Install Docker:
+Copy code
+sudo amazon-linux-extras install docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+
+
+EXPLANATION:
+
+sudo amazon-linux-extras install docker
+
+sudo: This command is used to execute a command with superuser privileges. It stands for "superuser do."
+amazon-linux-extras: This tool on Amazon Linux allows you to install additional software packages that are not included in the default package set. In this case, it is used to install Docker.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+sudo service docker start
+sudo: As mentioned earlier, this is used to execute the command with superuser privileges.
+service: This command is used to control services on the system.
+docker: The name of the Docker service. This command starts the Docker service.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Add user to the Docker group:
+
+sudo usermod -a -G docker ec2-user
+sudo: Again, this is used to execute the command with superuser privileges.
+usermod: This command is used to modify user account settings.
+-a -G docker: This part of the command adds the user (ec2-user in this case) to the docker group. Users in the docker group can run Docker commands without using sudo, which is convenient and avoids permission issues.
